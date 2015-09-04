@@ -1,2 +1,2 @@
--e git+https://github.com/michaelkuty/django-newswall.git#egg=newswall
+-e git+https://github.com/michaelkuty/django-newswall.git#egg=django-newswall
 py
