@@ -10,7 +10,6 @@ default_app_config = 'leonardo_newswall.Config'
 LEONARDO_APPS = [
     'leonardo_newswall',
     'newswall',
-    'tinymce',
 ]
 
 LEONARDO_PLUGINS = [
