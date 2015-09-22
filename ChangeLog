@@ -1,0 +1,16 @@
+CHANGES
+=======
+
+0.1.0
+-----
+
+* selectable sources for recentnews widget
+* fix manifest
+* fix module name
+* tinymce is not required
+* fix installing
+
+0.0.1
+-----
+
+* Initial commit
