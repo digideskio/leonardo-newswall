@@ -13,11 +13,14 @@ class RecentNewsWidget(ListWidget):
     show_button = models.BooleanField(
         default=True, verbose_name=_("show link button"))
 
+    sources = models.ManyToManyField(
+        Source, blank=True, verbose_name=_("Sources"))
+
     def render_content(self, options):
         request = options.get('request')
         context = {'widget': self, 'request': request}
 
-        stories = Story.objects.all()[:self.post_count]
+        stories = Story.objects.filter(source__id__in=self.sources.all())[:self.post_count]
 
         self.set_items(stories)
 
