@@ -97,7 +97,9 @@ by ``feedparser`` and turn the stories into news entries::
 Twitter API Feed
 ----------------
 
-Required: tweepy
+Required: tweepy::
+
+    pip install leonardo-newswall[twitter]
 
 Usage:
 
