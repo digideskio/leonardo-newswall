@@ -2,9 +2,10 @@
 
 {% fragment request "_page_title" %}{% block page_title %}{{ item }}{% endblock %}{% endfragment %}
 
-<small>
-    <a href="{{ object.source.get_absolute_url }}">{{ item.source }}</a> |
-    {{ item.timestamp|date:"j F Y" }}
-</small>
-
-<p>{{ item.body|striptags|truncatewords:20|safe|urlize }}</p>
+<article>
+    <small>
+        <a href="{{ object.source.get_absolute_url }}">{{ item.source }}</a> |
+        {{ item.timestamp|date:"j F Y" }}<i class="fa fa-calendar" style="margin-left: 3px;"></i>
+    </small><br>
+    <a href="{{ item.get_absolute_url }}">{{ item }}</a>
+</article>
