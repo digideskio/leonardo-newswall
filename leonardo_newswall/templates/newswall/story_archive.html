@@ -11,7 +11,7 @@
 {% if year %}{{ year }} - {% endif %}
 {% if month %}{{ month|date:"F Y" }} - {% endif %}
 {% if day %}{{ day|date:"j. F Y" }} - {% endif %}
-{% if source %}{{ source }} - {% endif %}
+{% if source %}{{ source }} {% endif %}
 
 {% endblock %}{% endfragment %}
 
