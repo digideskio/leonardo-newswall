@@ -3,7 +3,6 @@ from django.apps import AppConfig
 from django.utils.translation import ugettext_lazy as _
 
 from leonardo.apps import app_reverse_lazy
-from .widget import *
 
 default_app_config = 'leonardo_newswall.Config'
 
@@ -20,7 +19,7 @@ LEONARDO_PLUGINS = [
 LEONARDO_OPTGROUP = 'Leonardo Newswall'
 
 LEONARDO_WIDGETS = [
-    RecentNewsWidget,
+    'leonardo_newswall.models.RecentNewsWidget',
 ]
 
 
