@@ -2,7 +2,6 @@
 from django.apps import AppConfig
 from django.utils.translation import ugettext_lazy as _
 
-from leonardo.apps import app_reverse_lazy
 
 default_app_config = 'leonardo_newswall.Config'
 
@@ -24,6 +23,7 @@ LEONARDO_WIDGETS = [
 
 
 def source_url_override(self):
+    from leonardo.apps import app_reverse_lazy
     return app_reverse_lazy(
         'newswall_source_detail',
         'leonardo_newswall.apps.newswall',
